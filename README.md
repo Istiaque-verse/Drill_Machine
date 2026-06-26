@@ -17,7 +17,7 @@ The service receives a customer support ticket (complaint + recent transaction h
 ### Local install
 
 ```bash
-git clone <repo-url>
+git clone <git@github.com:Istiaque-verse/Drill_Machine.git>
 cd queuestorm-investigator
 python3 -m venv venv
 source venv/bin/activate
