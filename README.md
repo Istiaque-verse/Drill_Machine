@@ -311,27 +311,4 @@ Every `customer_reply` is checked. If the PIN/OTP safety line is missing (in Eng
 
 ---
 
-## Pre-Submission Checklist
 
-- [x] `GET /health` returns `{"status":"ok"}` with HTTP 200
-- [x] `POST /analyze-ticket` returns valid JSON matching the output schema
-- [x] `ticket_id` in response exactly matches `ticket_id` in request
-- [x] All 10 required output fields present in every response
-- [x] All enum values match exactly
-- [x] `relevant_transaction_id` is string or null
-- [x] `human_review_required` is boolean
-- [x] `confidence` is float 0.0–1.0
-- [x] LLM client initialized ONCE at startup (module-level singleton)
-- [x] 25-second timeout on every LLM call
-- [x] Safe fallback JSON on timeout or parse failure — no crash
-- [x] Malformed input returns 400, not 500 crash
-- [x] Empty transaction_history handled safely
-- [x] `GROQ_API_KEY` loaded from environment — never hardcoded
-- [x] `.env` in `.gitignore`
-- [x] `.env.example` has empty placeholder values only
-- [x] Dockerfile binds to `0.0.0.0`
-- [x] Dockerfile does NOT copy `.env`
-- [x] All 6 safety test cases pass
-- [x] All 10 sample cases pass (32/32 in `scripts/test_cases.py`)
-- [x] README has all required sections including MODELS
-- [x] No stack traces, tokens, or secrets in any response
